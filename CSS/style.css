@@ -122,6 +122,30 @@ body {
             }
         }
 
+        #Table {
+            margin: 5px;
+            border-spacing: 0;
+            clear: both;
+            tr:nth-child(even) {
+                background: black;
+            }
+            tr:nth-child(odd) {
+                background: #242424;
+            }
+            td {
+                border: #D48E4B 1px solid;
+                width: 1%;
+                text-align: center;
+            }
+            th {
+                border: #D48E4B 2px solid;
+                width: 1%;
+                text-align: center;
+                color: black;
+                background: wheat;
+            }
+        }
+
         #ExtraArticle {
             display: none;
         }
