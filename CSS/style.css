@@ -1,0 +1,167 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: black;
+    margin:0;
+    font-family: "Lucida Grande", serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #D1D1D1;
+    header {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+        background: black;
+        #HeaderBlock {
+            width: 100%;
+            margin-bottom: 5%;
+            #Logo {
+                max-width: 7%;
+                max-height: 10%;
+                padding-left: 1%;
+                padding-right: 1%;
+                padding-top: 0.5%;
+                margin: 0;
+                float: left;
+            }
+            #MainTitle {
+                color: #FFC859;
+                white-space: nowrap;
+                background: black;
+                width: 80%;
+                text-align: center;
+                margin: 0;
+                font-size: 4em;
+                height: 10%;
+                float: left;
+            }
+            #Profile {
+                margin: 0;
+                padding: 1%;
+                max-width: 3%;
+                max-height: 3%;
+                float: left;
+                display: inline-block;
+            }
+            #Settings {
+                margin: 0;
+                padding: 1%;
+                max-width: 3%;
+                max-height: 3%;
+                float: left;
+                display: inline-block;
+            }
+        }
+        #Nav {
+            max-height: 2%;
+            width: 100%;
+            margin: 0;
+            button {
+                font-family: "Lucida Grande", serif;
+                color: #FFC859;
+                background: black;
+                float: left;
+                font-size: 1.5em;
+                border-color: #D48E4B;
+                border-style: solid;
+                border-width: 1px;
+                width: 25%;
+                box-shadow: 0 10px 10px #242424;
+            }
+            button:hover {
+                background: #242424;
+            }
+        }
+    }
+
+    main {
+        padding-top: 115px;
+        .FilmList {
+            clear: both;
+            display: block;
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 7px;
+            }
+            p {
+                margin-top: 0;
+                margin-left: 7px;
+                margin-bottom: 10px;
+                color: #8F8F8F;
+            }
+            .OneFilm {
+                margin-bottom: 5px;
+                margin-right: 5px;
+                margin-left: 5px;
+                float: left;
+                border: wheat 2px solid;
+                background: black;
+                overflow: hidden;
+                border-radius: 5%;
+                width: 165px;
+                height: 300px;
+                img {
+                    margin: 0;
+                    display: inline;
+                    width: 165px;
+                    max-height: 250px;
+                }
+                p {
+                    margin: 0;
+                    color: #D1D1D1;
+                    text-align: center;
+                    vertical-align: center;
+                    max-width: 165px;
+                }
+            }
+            .OneFilm:hover {
+                background: #242424;
+            }
+        }
+
+        #ExtraArticle {
+            display: none;
+        }
+    }
+
+    footer {
+        border: gray 1px solid;
+        margin: 0;
+        clear: both;
+        background: black;
+        color: gray;
+        #Contacts {
+            float: left;
+            h4 {
+                margin-left: 1%;
+                margin-top: 1%;
+                margin-bottom: 0.5%;
+            }
+            ul {
+                margin: 0;
+            }
+            del {
+                font-size: 0.5em;
+            }
+        }
+
+
+        #Quote {
+            float: right;
+            #Draw {
+                font-size: 0.1em;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            #Quote {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
