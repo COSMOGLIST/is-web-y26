@@ -84,32 +84,34 @@ body {
                 }
             }
         }
-        #Settings_block {
-            display: none;
-            color: #FFC859;
-            background: black;
-            text-align: center;
-            position: fixed;
-            z-index: 9999;
-            top: 300px;
-            left: 500px;
-            right: 500px;
-            bottom: 300px;
-            height: 100px;
-            width: 300px;
+    }
+
+    #Settings_block {
+        display: none;
+        color: #FFC859;
+        background: black;
+        text-align: center;
+        z-index: 9999;
+        position: fixed;
+        top: 35%;
+        left: 30%;
+        height: 30%;
+        width: 40%;
+        margin: 0;
+        border-color: #D48E4B;
+        border-style: solid;
+        border-width: 1px;
+        button {
+            height: 35%;
+            width: 85%;
             border-color: #D48E4B;
             border-style: solid;
             border-width: 1px;
-            button {
-                border-color: #D48E4B;
-                border-style: solid;
-                border-width: 1px;
-                background: black;
-                color: #D1D1D1;
-            }
-            button:hover {
-                background: #242424;
-            }
+            background: black;
+            color: #D1D1D1;
+        }
+        button:hover {
+            background: #242424;
         }
     }
 
