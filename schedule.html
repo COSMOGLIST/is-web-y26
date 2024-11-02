@@ -30,49 +30,16 @@
     <button>Настроить то</button>
     <button>Настроить сё</button>
 </div>
-<main>
-    <section id="AuthorCompilation" class="CompilationList">
-        <h2>Подборки от авторов</h2>
-        <p>
-            Специальные подборки от авторов и пользователей нашего проекта
-        </p>
-        <div class="Compilation">
-            <img src="/images/pupaCompilation.png"/>
-            <p>Подборка от Пупы</p>
+<main id="schedule">
+    <div id="schedule_block">
+        <div id="inputLine">
+            <input type="text" placeholder="Введите фильм">
+            <button id="push">Добавить</button>
         </div>
-        <div class="Compilation">
-            <img src="/images/lupaCompilation.png"/>
-            <p>Подборка от Лупы</p>
+        <div id="schedule_films">
         </div>
-    </section>
-    <section id="GenreCompilations" class="CompilationList">
-        <h2>Подборки по жанрам</h2>
-        <p>
-            Тематические сборки фильмов по жанрам
-        </p>
-        <div class="Compilation">
-            <img src="/images/pupaCompilation.png"/>
-            <p>Люди сидят че то</p>
-        </div>
-        <div class="Compilation">
-            <img src="/images/lupaCompilation.png"/>
-            <p>пу пу пу</p>
-        </div>
-    </section>
-    <section id="CelebritiesCompilations" class="CompilationList">
-        <h2>Подборки знаменитостей</h2>
-        <p>
-            Любимые фильмы именитых режиссеров, сценаристов и актеров
-        </p>
-        <div class="Compilation">
-            <img src="/images/pupaCompilation.png"/>
-            <p>Пупа рекомендует</p>
-        </div>
-        <div class="Compilation">
-            <img src="/images/lupaCompilation.png"/>
-            <p>Лупа рекомендует</p>
-        </div>
-    </section>
+    </div>
+
 </main>
 <footer>
     <section id="Contacts">
@@ -83,7 +50,8 @@
         </ul>
         <del>Вам никто не ответит</del>
     </section>
-
+    <section>
+    </section>
     <aside id="Quote">
         <q><cite>Absolute cinema</cite></q> - Мартин Скорцезе о фильме <q><cite>Зелёный слоник</cite></q>
         <pre id="Draw">
@@ -100,3 +68,4 @@
 
 <script src="JS/buttons.js"></script>
 <script src="JS/settings.js"></script>
+<script src="JS/schedule.js"></script>

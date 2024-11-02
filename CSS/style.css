@@ -68,7 +68,7 @@ body {
                 background: black;
                 float: left;
                 white-space: nowrap;
-                width: 24.9%;
+                width: 19.9%;
                 text-align: center;
                 .navigation_button_link {
                     font-family: "Lucida Grande", serif;
@@ -117,7 +117,7 @@ body {
 
     main {
         overflow-y: scroll;
-        height: 71vh;
+        height: 74vh;
         margin-top: 115px;
         .FilmList {
             clear: both;
@@ -254,6 +254,76 @@ body {
         #ExtraArticle {
             display: none;
         }
+
+        #schedule_block {
+            top: 10%;
+            left: 35%;
+            height: 15%;
+            width: 25%;
+            background: #FFC859;
+            border-radius: 20px;
+            min-width: 450px;
+            min-height: 95px;
+            position: relative;
+            #inputLine{
+                input {
+                    top: 5px;
+                    left: 35px;
+                    width: 250px;
+                    position: relative;
+                    border-color: wheat;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    font-family: "Lucida Grande", serif;
+                }
+                #push {
+                    top: 5px;
+                    left: 50px;
+                    position: relative;
+                    font-size: 20px;
+                    border-radius: 10px;
+                    background: wheat;
+                    font-family: "Lucida Grande", serif;
+                }
+            }
+
+            #schedule_films{
+                border-radius: 10px;
+                top: 10px;
+                width: 410px;
+                position: relative;
+                background: #FFC859;
+                padding: 30px 20px;
+             }
+
+            .schedule_film{
+                border-radius: 5px;
+                align-items: center;
+                justify-content: space-between;
+                border: 1px solid #939697;
+                background-color: wheat;
+                height: 25px;
+                margin-bottom: 4px;
+                padding: 5px 10px;
+                display: flex;
+            }
+            .schedule_film span{
+                font-family: "Lucida Grande", serif;
+                color: black;
+                letter-spacing: 1px;
+                font-size: 15px;
+            }
+            .schedule_film button{
+                background-color: wheat;
+                color: black;
+                width: 65px;
+                border-radius: 5px;
+                font-family: "Lucida Grande", serif;
+            }
+        }
+
+
+
 
     }
     footer {
