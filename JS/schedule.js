@@ -4,27 +4,29 @@ function reaction(){
     }
     else{
         const film_name = document.querySelector('#inputLine input').value
-        addFilm(film_name)
+        const film_id = generateUniqueId();
+        addFilm(film_id, film_name);
         const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-        tasks.push(film_name);
+        tasks.push({ id: film_id, name: film_name });
         saveTasksToLocalStorage(tasks);
     }
 }
 
-function addFilm(film_name) {
+function addFilm(film_id, film_name) {
     document.querySelector('#schedule_films').innerHTML += `
             <div class="schedule_film">
                 <span id="schedule_film_film">
                     ${film_name}
                 </span>
-                <button class="film_delete_button">Удалить</button>
+                <button class="film_delete_button" data-film-id="${film_id}">Удалить</button>
             </div>
         `;
     document.querySelector('#inputLine input').value = ""
     const current_films = document.querySelectorAll(".film_delete_button");
     for(let i=0; i<current_films.length; i++){
         current_films[i].onclick = function(){
-            removeTaskFromLocalStorage(i);
+            const filmId = this.getAttribute("data-film-id");
+            removeTaskFromLocalStorage(filmId);
             this.parentNode.remove();
         }
     }
@@ -36,15 +38,18 @@ function saveTasksToLocalStorage(tasks) {
 
 function loadTasksFromLocalStorage() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks.forEach(task => addFilm(task));
+    tasks.forEach(task => addFilm(task.id, task.name));
 }
 
-function removeTaskFromLocalStorage(i) {
+function removeTaskFromLocalStorage(filmId) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks.splice(i, 1);
+    tasks = tasks.filter(task => task.id !== filmId);
     saveTasksToLocalStorage(tasks);
 }
 
+function generateUniqueId() {
+    return Math.random().toString(36);
+}
 
 document.querySelector('#push').onclick = reaction;
 
