@@ -24,8 +24,7 @@ function addFilm(film_name) {
     const current_films = document.querySelectorAll(".film_delete_button");
     for(let i=0; i<current_films.length; i++){
         current_films[i].onclick = function(){
-            const film_n = this.parentNode.querySelector("#schedule_film_film").textContent;
-            removeTaskFromLocalStorage(film_n);
+            removeTaskFromLocalStorage(i);
             this.parentNode.remove();
         }
     }
@@ -40,9 +39,9 @@ function loadTasksFromLocalStorage() {
     tasks.forEach(task => addFilm(task));
 }
 
-function removeTaskFromLocalStorage(taskText) {
+function removeTaskFromLocalStorage(i) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks = tasks.filter(task => task !== taskText.trim());
+    tasks.splice(i, 1);
     saveTasksToLocalStorage(tasks);
 }
 
