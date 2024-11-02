@@ -6,7 +6,7 @@ function reaction(){
         const film_name = document.querySelector('#inputLine input').value
         const film_id = generateUniqueId();
         addFilm(film_id, film_name);
-        const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        const tasks = JSON.parse(localStorage.getItem("films")) || [];
         tasks.push({ id: film_id, name: film_name });
         saveTasksToLocalStorage(tasks);
     }
@@ -32,19 +32,19 @@ function addFilm(film_id, film_name) {
     }
 }
 
-function saveTasksToLocalStorage(tasks) {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+function saveTasksToLocalStorage(films) {
+    localStorage.setItem("films", JSON.stringify(films));
 }
 
 function loadTasksFromLocalStorage() {
-    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks.forEach(task => addFilm(task.id, task.name));
+    const films = JSON.parse(localStorage.getItem("films")) || [];
+    films.forEach(film => addFilm(film.id, film.name));
 }
 
 function removeTaskFromLocalStorage(filmId) {
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    tasks = tasks.filter(task => task.id !== filmId);
-    saveTasksToLocalStorage(tasks);
+    let films = JSON.parse(localStorage.getItem("films")) || [];
+    films = films.filter(film => film.id !== filmId);
+    saveTasksToLocalStorage(films);
 }
 
 function generateUniqueId() {
