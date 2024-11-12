@@ -68,7 +68,7 @@ body {
                 background: black;
                 float: left;
                 white-space: nowrap;
-                width: 19.9%;
+                width: 16.5%;
                 text-align: center;
                 .navigation_button_link {
                     font-family: "Lucida Grande", serif;
@@ -322,7 +322,47 @@ body {
             }
         }
 
+        #reviews_block {
+            h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-left: 7px;
+            }
+        }
 
+        #loading {
+            img {
+                width: 25px;
+                height: 25px;
+                margin-left: 7px;
+            }
+        }
+
+        .error {
+            margin-left: 7px;
+        }
+
+        .review {
+            margin-top: 10px;
+            margin-left: 7px;
+            margin-right: 7px;
+            border: wheat 2px solid;
+            float: left;
+            width: 270px;
+            height: 250px;
+            h3 {
+                margin: 0 0 0 7px;
+                color: #FFC859;
+            }
+            h4 {
+                margin: 0 0 0 7px;
+                font-size: small;
+                color: dimgrey;
+            }
+            p {
+                margin: 0 0 0 7px;
+            }
+        }
 
 
     }
