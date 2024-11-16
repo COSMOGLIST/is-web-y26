@@ -13,14 +13,20 @@ function reaction(){
 }
 
 function addFilm(film_id, film_name) {
-    document.querySelector('#schedule_films').innerHTML += `
-            <div class="schedule_film">
-                <span id="schedule_film_film">
-                    ${film_name}
-                </span>
-                <button class="film_delete_button" data-film-id="${film_id}">Удалить</button>
-            </div>
-        `;
+
+    let schedule_film = document.createElement('div');
+    schedule_film.className = "schedule_film";
+    let schedule_film_film = document.createElement('span');
+    schedule_film_film.id = "schedule_film_film";
+    schedule_film_film.textContent = film_name;
+    let film_delete_button = document.createElement('button');
+    film_delete_button.className = "film_delete_button";
+    film_delete_button.textContent = 'Удалить';
+    film_delete_button.setAttribute('data-film-id', film_id);
+    schedule_film.appendChild(schedule_film_film);
+    schedule_film.appendChild(film_delete_button);
+
+    document.querySelector('#schedule_films').appendChild(schedule_film);
     document.querySelector('#inputLine input').value = ""
     const current_films = document.querySelectorAll(".film_delete_button");
     for(let i=0; i<current_films.length; i++){
